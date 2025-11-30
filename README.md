@@ -118,7 +118,7 @@ This will:
 ![Register](screenshots/register.png)
 
 ### Employee Dashboard  
-![Employee Dashboard](screenshots/employee-dashboard.jpeg)
+![Employee Dashboard](screenshots/employee-dashboard.png)
 
 ### Manager Dashboard  
 ![Manager Dashboard](screenshots/manager-dashboard.png)
