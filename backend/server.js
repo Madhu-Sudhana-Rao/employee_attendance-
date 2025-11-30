@@ -7,7 +7,6 @@ import connectDB from './config/db.js';
 
 dotenv.config();
 
-// connectDB(); // Handled by middleware
 
 const app = express();
 
