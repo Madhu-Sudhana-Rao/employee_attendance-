@@ -22,35 +22,6 @@ A full-stack MERN application for managing employee attendance with role-based a
 
 ---
 
-## 📂 Project Structure
-employee-attendance/
-│
-├── backend/
-│ ├── config/
-│ ├── controllers/
-│ ├── middleware/
-│ ├── models/
-│ ├── routes/
-│ ├── utils/
-│ ├── seed.js
-│ └── index.js
-│
-└── frontend/
-├── src/
-│ ├── api/
-│ ├── components/
-│ ├── hooks/
-│ ├── pages/
-│ ├── router/
-│ ├── store/
-│ ├── utils/
-│ ├── App.jsx
-│ └── main.jsx
-├── index.html
-└── package.json
-
----
-
 ## ⚙️ Backend Setup
 
 ### 1. Navigate to backend folder
@@ -147,7 +118,7 @@ This will:
 ![Register](screenshots/register.png)
 
 ### Employee Dashboard  
-![Employee Dashboard](screenshots/employee-dashboard.png)
+![Employee Dashboard](screenshots/employee-dashboard.jpeg)
 
 ### Manager Dashboard  
 ![Manager Dashboard](screenshots/manager-dashboard.png)
