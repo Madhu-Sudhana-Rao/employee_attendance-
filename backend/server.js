@@ -7,13 +7,24 @@ import connectDB from './config/db.js';
 
 dotenv.config();
 
-connectDB();
+// connectDB(); // Handled by middleware
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 app.use(morgan('dev'));
+
+// Middleware to ensure DB is connected
+app.use(async (req, res, next) => {
+    try {
+        await connectDB();
+        next();
+    } catch (error) {
+        console.error('Database connection error:', error);
+        res.status(500).json({ message: 'Database connection failed' });
+    }
+});
 
 import authRoutes from './routes/authRoutes.js';
 import attendanceRoutes from './routes/attendanceRoutes.js';
