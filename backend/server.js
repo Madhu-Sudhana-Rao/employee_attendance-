@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import morgan from 'morgan';
+import mongoose from 'mongoose';
 import connectDB from './config/db.js';
 
 dotenv.config();
@@ -19,6 +20,15 @@ import attendanceRoutes from './routes/attendanceRoutes.js';
 
 app.get('/', (req, res) => {
     res.send('API is running...');
+});
+
+app.get('/api/health', (req, res) => {
+    res.json({
+        status: 'ok',
+        timestamp: new Date(),
+        env: process.env.NODE_ENV,
+        dbState: mongoose.connection.readyState, // 0: disconnected, 1: connected, 2: connecting, 3: disconnecting
+    });
 });
 
 app.use('/api/auth', authRoutes);
